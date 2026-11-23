@@ -1,0 +1,141 @@
+:root {
+  color-scheme: light dark;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+  background: #f3f8f5;
+  color: #173126;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top right, rgba(74, 176, 130, 0.18), transparent 32rem), #f3f8f5;
+}
+
+main {
+  width: min(760px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 72px 0;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #176b4d;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.mark {
+  width: 42px;
+  height: 42px;
+  border-radius: 13px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #176b4d;
+  color: #fff;
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.card {
+  margin-top: 30px;
+  padding: clamp(24px, 5vw, 52px);
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 24px 70px rgba(23, 76, 55, 0.12);
+  backdrop-filter: blur(24px) saturate(140%);
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 7vw, 4.4rem);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+}
+
+h2 {
+  margin: 36px 0 10px;
+  font-size: 1.15rem;
+}
+
+p,
+li {
+  color: #53675e;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.lead {
+  max-width: 620px;
+  font-size: 1.16rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.button {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 0 20px;
+  background: #176b4d;
+  color: #fff;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.button.secondary {
+  background: rgba(23, 107, 77, 0.1);
+  color: #176b4d;
+}
+
+footer {
+  padding-top: 24px;
+  color: #708078;
+  font-size: 0.86rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root,
+  body {
+    background: #081e16;
+    color: #edf8f2;
+  }
+
+  body {
+    background: radial-gradient(circle at top right, rgba(53, 172, 117, 0.22), transparent 32rem), #081e16;
+  }
+
+  .card {
+    border-color: rgba(255, 255, 255, 0.12);
+    background: rgba(16, 47, 35, 0.78);
+  }
+
+  p,
+  li,
+  footer {
+    color: #a9bbb2;
+  }
+
+  .brand,
+  .button.secondary {
+    color: #65d49f;
+  }
+
+  .button.secondary {
+    background: rgba(101, 212, 159, 0.12);
+  }
+}
